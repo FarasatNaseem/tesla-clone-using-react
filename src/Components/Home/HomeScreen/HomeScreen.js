@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom"
 
 function HomeScreen({
   title,
@@ -11,21 +12,21 @@ function HomeScreen({
 }) {
   return (
     <MainContainer bgImage={backgroundImg}>
-      <Fade buttom>
+      <Zoom>
       <Text>
           <h1>{title}</h1>
           <p>{description}</p>
         </Text>
-      </Fade>
+      </Zoom>
       <Buttons>
-        <Fade buttom>
+        <Zoom>
           <ButtonGroup>
             <LeftSideButton>{leftButtonText}</LeftSideButton>
             {rightButtonText && (
               <RightSideButton>{rightButtonText}</RightSideButton>
             )}
           </ButtonGroup>
-        </Fade>
+        </Zoom>
         <ArrowButton src="/images/down-arrow.svg" />
       </Buttons>
     </MainContainer>

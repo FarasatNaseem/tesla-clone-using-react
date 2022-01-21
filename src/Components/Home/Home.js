@@ -10,28 +10,28 @@ function Home() {
         description="Order Online for Touchless Delivery"
         backgroundImg="model-3.jpg"
         leftButtonText="Custom order"
-        rightButtonText="Existing inventory"
+        rightButtonText="Learn Mode"
       />
       <HomeScreen
         title="Model S"
         description="Order Online for Touchless Delivery"
         backgroundImg="model-s.jpg"
         leftButtonText="Custom order"
-        rightButtonText="Existing inventory"
+        rightButtonText="Learn Mode"
       />
       <HomeScreen
         title="Model X"
         description="Order Online for Touchless Delivery"
         backgroundImg="model-x.jpg"
         leftButtonText="Custom order"
-        rightButtonText="Existing inventory"
+        rightButtonText="Learn Mode"
       />
       <HomeScreen
         title="Model Y"
         description="Order Online for Touchless Delivery"
         backgroundImg="model-y.jpg"
         leftButtonText="Custom order"
-        rightButtonText="Existing inventory"
+        rightButtonText="Learn Mode"
       />
        <HomeScreen
        title="Solar and Powerwall"
