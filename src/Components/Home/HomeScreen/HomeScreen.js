@@ -47,6 +47,7 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 background-image: ${(props) => `url("/images/${props.bgImage}");`};
+
 `;
 
 const Text = Styled.div`

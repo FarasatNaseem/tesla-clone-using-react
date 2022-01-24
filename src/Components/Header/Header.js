@@ -1,8 +1,14 @@
 import React from "react";
 import Styled from "styled-components";
+import CloseIcon from "@mui/icons-material/Close";
+import {useState} from "react";
+import { Translate } from "@mui/icons-material";
+
 function Header() {
+
+const [getSideNavStatus, setSideNavStatus] = useState(false);
   return (
-        <HeaderContainer>
+    <HeaderContainer>
       <Logo src="/images/logo.svg" />
       <CenteredMenuItems>
         <a href="#">Model S</a>
@@ -12,10 +18,34 @@ function Header() {
         <a href="#">Charging</a>
       </CenteredMenuItems>
       <RightSideMenuItems>
-        <a class="spt" href="#">Support</a>
-        <a class="act" href="#">Account</a>
-        <a href="#">Menu</a>
+        <a class="spt" href="#">
+          Support
+        </a>
+        <a class="act" href="#">
+          Account
+        </a>
+        <a href="#" onClick={()=>setSideNavStatus(true)}>Menu</a>
       </RightSideMenuItems>
+
+      <SideNav show={getSideNavStatus}>
+        <BtnContainer>
+          <CloseButton onClick={()=>setSideNavStatus(false)}/>
+        </BtnContainer>
+        <ul>
+          <li>
+            <a href="#">Item1</a>
+          </li>
+          <li>
+            <a href="#">Item2</a>
+          </li>
+          <li>
+            <a href="#">Item3</a>
+          </li>
+          <li>
+            <a href="#">Item4</a>
+          </li>
+        </ul>
+      </SideNav>
     </HeaderContainer>
   );
 }
@@ -23,6 +53,7 @@ function Header() {
 export default Header;
 
 const HeaderContainer = Styled.div`
+z-index: 1;
 min-height: 70px;
 position: fixed;
 display: flex;
@@ -72,4 +103,43 @@ a{
     }
 }
 
+`;
+
+const SideNav = Styled.div`
+/* display: none; */
+position: fixed;
+width: 40%;
+background-color: white;
+top: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+transform: ${props => props.show ? 'translateX(0%)' :'translateX(100%)'};
+ul{
+  list-style: none; 
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+
+  li{
+padding: 18px 0;
+border-bottom: 1px solid gray;
+
+a{
+  font-weight: 700;
+}
+  }
+}
+
+`;
+
+const BtnContainer = Styled.div`
+display: flex;
+justify-content: flex-end;
+`;
+
+const CloseButton = Styled(CloseIcon)`
+padding: 10px 10% 5px 5px;
+cursor: pointer;
 `;
