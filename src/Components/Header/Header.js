@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 import CloseIcon from "@mui/icons-material/Close";
 import {useState} from "react";
-import { Translate } from "@mui/icons-material";
+// import { Translate } from "@mui/icons-material";
 
 function Header() {
 
@@ -11,20 +11,20 @@ const [getSideNavStatus, setSideNavStatus] = useState(false);
     <HeaderContainer>
       <Logo src="/images/logo.svg" />
       <CenteredMenuItems>
-        <a href="#">Model S</a>
-        <a href="#">Model 3</a>
-        <a href="#">Model X</a>
-        <a href="#">Model Y</a>
-        <a href="#">Charging</a>
+        <a href="google.com">Model S</a>
+        <a href="google.com">Model 3</a>
+        <a href="google.com">Model X</a>
+        <a href="google.com">Model Y</a>
+        <a href="google.com">Charging</a>
       </CenteredMenuItems>
       <RightSideMenuItems>
-        <a class="spt" href="#">
+        <a class="spt" href="google.com">
           Support
         </a>
-        <a class="act" href="#">
+        <a class="act" href="google.com">
           Account
         </a>
-        <a href="#" onClick={()=>setSideNavStatus(true)}>Menu</a>
+        <a href="google.com" onClick={()=>setSideNavStatus(true)}>Menu</a>
       </RightSideMenuItems>
 
       <SideNav show={getSideNavStatus}>
@@ -33,16 +33,16 @@ const [getSideNavStatus, setSideNavStatus] = useState(false);
         </BtnContainer>
         <ul>
           <li>
-            <a href="#">Item1</a>
+            <a href="google.com">Item1</a>
           </li>
           <li>
-            <a href="#">Item2</a>
+            <a href="google.com">Item2</a>
           </li>
           <li>
-            <a href="#">Item3</a>
+            <a href="google.com">Item3</a>
           </li>
           <li>
-            <a href="#">Item4</a>
+            <a href="google.com">Item4</a>
           </li>
         </ul>
       </SideNav>
